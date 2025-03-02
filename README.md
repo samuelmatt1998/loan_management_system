@@ -66,7 +66,7 @@ python manage.py runserver
 #### **Installation:**
 
 ```sh
-cd otp_service
+cd loan_management_system
 npm install  # Install dependencies
 ```
 
