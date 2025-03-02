@@ -30,7 +30,7 @@ def user_email_registration(request):
 
         # Call Node.js server to send email
         email_payload = {"email": user.email, "otp": otp_code}
-        response = requests.post("http://localhost:5001/send-email", json=email_payload)
+        response = requests.post("https://loan-management-system-node-server.onrender.com", json=email_payload)
 
         if response.status_code != 200:  # OTP sending failed
             user.delete()  # Remove user if OTP email fails
