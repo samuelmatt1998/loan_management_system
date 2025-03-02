@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "6198539f-89e3-49c0-add1-525c86ef4963",
+		"name": "Loan_Management",
+		"description": "Collection of all apis related",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36562110"
+	},
+	"item": [
+		{
+			"name": "email-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"securepassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/email-register/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"email-register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"john@example.com\",\n  \"otp\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/verify-otp/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"verify-otp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"testflashfund@gmail.com\",\n    \"password\":\"jd123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/login/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-loan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwOTQxMzU0LCJpYXQiOjE3NDA5Mzc3NTQsImp0aSI6IjMxNDIxNmY5ODNjNTQ5MDQ4MGJkMWVjMzBiOTBlODE5IiwidXNlcl9pZCI6NX0.HOgeCYzpc_ny0KCbaxF1xY3-DTMFeV_WXuvw2eIxppA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"amount\": 15000, \n    \"interest_rate\": 10, \n    \"duration_months\": 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/add-loan/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"add-loan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make-payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwOTQxMzU0LCJpYXQiOjE3NDA5Mzc3NTQsImp0aSI6IjMxNDIxNmY5ODNjNTQ5MDQ4MGJkMWVjMzBiOTBlODE5IiwidXNlcl9pZCI6NX0.HOgeCYzpc_ny0KCbaxF1xY3-DTMFeV_WXuvw2eIxppA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"loan_id\":\"loan_bc333dfa_usr5\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/make-payment/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"make-payment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/view-loan/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"view-loan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "foreclose-loan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwOTQxMzU0LCJpYXQiOjE3NDA5Mzc3NTQsImp0aSI6IjMxNDIxNmY5ODNjNTQ5MDQ4MGJkMWVjMzBiOTBlODE5IiwidXNlcl9pZCI6NX0.HOgeCYzpc_ny0KCbaxF1xY3-DTMFeV_WXuvw2eIxppA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loan_id\":\"loan_bc333dfa_usr5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/loan_bc333dfa_usr5/foreclose/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"loan_bc333dfa_usr5",
+						"foreclose",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin: view-all-loan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwOTQyMDQwLCJpYXQiOjE3NDA5Mzg0NDAsImp0aSI6IjAzY2VkMDFjOWQ5NzQ4YTdiODUxOTUwYWMwNDg3OGM4IiwidXNlcl9pZCI6Nn0.DD-ZXt5KnMjkM9gmqc9yy7mMsjV7j1SFdNSzkei5cEc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/view-all-loan/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"view-all-loan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin:view-user-loan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwOTQyMDQwLCJpYXQiOjE3NDA5Mzg0NDAsImp0aSI6IjAzY2VkMDFjOWQ5NzQ4YTdiODUxOTUwYWMwNDg3OGM4IiwidXNlcl9pZCI6Nn0.DD-ZXt5KnMjkM9gmqc9yy7mMsjV7j1SFdNSzkei5cEc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/view-user-loan/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"view-user-loan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin:Delete Loan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwOTQyMDQwLCJpYXQiOjE3NDA5Mzg0NDAsImp0aSI6IjAzY2VkMDFjOWQ5NzQ4YTdiODUxOTUwYWMwNDg3OGM4IiwidXNlcl9pZCI6Nn0.DD-ZXt5KnMjkM9gmqc9yy7mMsjV7j1SFdNSzkei5cEc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loan_id\":\"loan_bc333dfa_usr5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-management-system-gswl.onrender.com/api/delete-loan/",
+					"protocol": "https",
+					"host": [
+						"loan-management-system-gswl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"delete-loan",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
